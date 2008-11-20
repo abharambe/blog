@@ -12,7 +12,7 @@
                 {% endif %}
             </h1>
             <div class="date" title="{{ entry.published }}">
-                {{ entry.published|timesince }} ago
+                posted on {{ entry.published|date:"d M Y" }}
             </div>
             <div class="body">
                 {{ entry.body }}
