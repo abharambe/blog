@@ -1,0 +1,15 @@
+<div>
+    <div class='lF'>
+        <a class="comments" href="/e/{{ entry.slug }}#disqus_thread">View comments</a>
+    </div>
+    <div class='lF'>
+        {% if entry.tags %}
+        <div class="tags">
+            {% for tag in entry.tags %}
+            <a href="/t/{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    <div class='cF'></div>
+</div>

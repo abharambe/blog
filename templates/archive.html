@@ -18,14 +18,7 @@
             <div class="body">
                 {{ entry.body|striptags|truncatewords:50 }}
             </div>
-            {% if entry.tags %}
-                <div class="tags">
-                    {% for tag in entry.tags %}
-                        <a href="/t/{{ tag }}">{{ tag }}</a>
-                    {% endfor %}
-                </div>
-            {% endif %}
-            <a class="comments" href="/e/{{ entry.slug }}#disqus_thread">View comments</a>
+            {% include "tagsncomments.html" %}
         </div>
     {% endfor %}
 {% endblock %}
